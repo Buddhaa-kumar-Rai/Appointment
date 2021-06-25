@@ -1,0 +1,38 @@
+<div class="aa">
+  <div class="container">
+    <p><b>Create your Appointment Here.</b></p><br>
+    <form [formGroup]="f" (ngSubmit)="updateinfos()">
+      <div class="form-group"><br>
+        <label>Appointment Name</label>
+        <input type="text" class="form-control" placeholder="AppointmentName" formControlName="name">
+        <div *ngIf="f.get('name')?.touched && f.get('name')?.invalid " class="alert alert-danger">Appointment name cannot
+          be empty and it must be at least 4 character</div>
+      </div>
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" class="form-control" placeholder="" formControlName="date">
+        <div *ngIf="f.get('date')?.touched && f.get('date')?.invalid" class="alert alert-danger"> Date is required</div>
+      </div>
+      <div class="form-group">
+        <label>Time</label>
+        <input type="time" class="form-control" placeholder="" formControlName="time">
+        <div *ngIf="f.get('time')?.touched && f.get('time')?.invalid" class="alert alert-danger"> Time is required</div>
+      </div>
+      <label>Room</label>
+      <select formControlName="room" class="form-select" >
+        <option selected>select room</option>
+        <option >room A</option>
+        <option >room B</option>
+        <option >room C</option>
+        <option >room D</option>
+        <option >room E</option>
+        
+      </select>
+      <div *ngIf="f.get('room')?.touched && f.get('room')?.invalid" class="alert alert-danger"> Choose the room</div>
+      <br>
+      <button type="submit" class="btn btn-primary btn-sm" >update</button>
+      <button type="submit" class="btn btn-primary btn-sm" routerLink="/dashb">back</button>
+    </form>
+  </div>
+
+</div>

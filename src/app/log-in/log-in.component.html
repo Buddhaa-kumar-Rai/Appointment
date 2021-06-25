@@ -1,0 +1,62 @@
+<div class="aa">
+  <div class="container">
+    <div class="d" *ngIf="v && !v1">
+      <h3 class="heading">Click the admin button if you are admin else click user button</h3><br>
+      <button class="btn btn-primary" (click)="val1()">admin</button>
+      <button class="btn btn-primary" (click)="val()">user</button>
+    </div>
+  </div>  
+  
+  <div class="container">
+    <div class="row center" *ngIf="v1">
+      <div class="col-lg-6 col-md-10 col-sm-12 ">
+        <p><b class="header">Appointment Scheduler System</b></p>
+        <button type="submit" class="btn btn-primary" (click)="sign()">already have account</button><br><br>
+        <form [formGroup]='form'>
+          <div class="form-group">
+            <label>Email address</label>
+            <input type="email" class="form-control" placeholder="Enter email" formControlName="mail">
+          </div>
+          <div *ngIf=" form.get('mail')?.touched && form.get('mail')?.invalid" class="alert alert-danger">wrong format</div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" placeholder="Password" formControlName="pass">
+          </div>
+          <div *ngIf="form.get('pass')?.touched && form.get('pass')?.invalid" class="alert alert-danger">Required</div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Confirm Password</label>
+            <input type="password" class="form-control" placeholder="" formControlName="confpass">
+          </div>
+          <div *ngIf="form.get('conpass')?.touched && form.get('conpass')?.invalid" class="alert alert-danger">Required</div>
+          <br>
+  
+          <button type="submit" class="btn btn-primary" (click)="signup()">SignUp</button><!-- redirect if verified-->
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row center" *ngIf="!v1 && !v">
+      <div class="col-lg-6 col-md-10 col-sm-12 ">
+        <p><b class="header">Welcome to login page.</b></p><br>
+    
+        <form [formGroup]="form">
+          <div class="form-group">
+            <label>Email address</label>
+            <input type="email" class="form-control" placeholder="Enter email" formControlName="email">
+          </div>
+          <div *ngIf=" form.get('email')?.touched && form.get('email')?.invalid" class="alert alert-danger">Give valid email</div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" placeholder="Password" formControlName="passw">
+          </div>
+          <div *ngIf="form.get('passw')?.touched && form.get('passw')?.invalid" class="alert alert-danger">Required</div>
+          <br>
+          <a type="submit" class="btn btn-primary" (click)="onlogin()" >Login</a>
+        </form>
+        <!-- routerLink="/creat" -->
+      </div>
+    </div>
+  </div>
+</div>

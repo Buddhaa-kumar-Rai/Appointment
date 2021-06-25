@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="col-lg-7 col-md-10 col-sm-12 ">
+        <h1 class="text-bold text-center" style="color:rgb(92, 5, 5);">DashBoard</h1>
+        <button class="btn btn-primary " routerLink="/creat">Create Appointment</button><br><br>
+        <table class="table table-responsive table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Sl.no</th>
+                    <th scope="col">AppointmentName</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Room</th>
+                    <th scope="col">Action1</th>
+                    <th scope="col">Action2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of saa">
+                    <th>{{a.id}}</th>
+                    <td>{{a.AppointmentName}}</td>
+                    <td>{{a.date}}</td>
+                    <td>{{a.time}}</td>
+                    <td>{{a.room}}</td>
+                    <td><button type="submit" class="btn btn-primary btn-sm" (click) = "deleted(a.id)">Delete</button>
+                     </td>
+                    <td><a routerLink="/updateuser/{{a.id}}"><button class=" btn btn-primary btn-sm">Edit</button></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

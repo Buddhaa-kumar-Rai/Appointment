@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "AppointmentName": "abcd",
+      "date": "2021-06-25",
+      "time": "10:44",
+      "room": "a",
+      "id": 1
+    },
+    {
+      "AppointmentName": "abcde",
+      "date": "2021-06-03",
+      "time": "11:45",
+      "room": "b",
+      "id": 2
+    },
+    {
+      "AppointmentName": "xyza",
+      "date": "2021-06-04",
+      "time": "10:59",
+      "room": "school",
+      "id": 3
+    }
+  ],
+  "admin": [
+    {
+      "name": "admin@a.com",
+      "password": "54321"
+    }
+  ],
+  "admins": [
+    {
+      "name": "asdfgh",
+      "date": "2021-06-13",
+      "time": "10:57",
+      "sel": "room A",
+      "id": 6
+    },
+    {
+      "name": "ssssssss",
+      "date": "2021-05-31",
+      "time": "10:02",
+      "sel": "room A",
+      "id": 8
+    },
+    {
+      "name": "dfghjkl",
+      "date": "2021-06-05",
+      "time": "11:04",
+      "sel": "room D",
+      "id": 10
+    }
+  ],
+  "status": [
+    {
+      "AppointmentName": "abcd",
+      "date": "2021-06-25",
+      "time": "10:44",
+      "room": "approved",
+      "id": 1
+    },
+    {
+      "AppointmentName": "abcde",
+      "date": "2021-06-03",
+      "time": "11:45",
+      "room": "declined",
+      "id": 3
+    }
+  ]
+}

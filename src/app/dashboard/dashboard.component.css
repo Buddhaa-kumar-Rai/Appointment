@@ -1,0 +1,14 @@
+
+.btn{
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.container{
+    position: relative;
+    width: 60%;
+    top: 20px;
+}
+.aa{
+    height: 635px;
+    background-color: rgb(84, 136, 187);
+}

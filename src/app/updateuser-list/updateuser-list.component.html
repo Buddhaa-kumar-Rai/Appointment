@@ -1,0 +1,32 @@
+<div class="container">
+    <p><b>Update your Appointment Here.</b></p><br>
+    <form [formGroup]="f" (ngSubmit)="updateinfos()">
+      <div class="form-group"><br>
+        <label>Appointment Name</label>
+        <input type="text" class="form-control" placeholder="AppointmentName" formControlName="AppointmentName">
+        <div *ngIf="f.get('AppointmentName')?.touched && f.get('AppointmentName')?.invalid " class="alert alert-danger">Appointment name cannot
+          be empty and it must be at least 4 character</div>
+      </div>
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" class="form-control" placeholder="" formControlName="date">
+        <div *ngIf="f.get('date')?.touched && f.get('date')?.invalid" class="alert alert-danger"> Date is required</div>
+      </div>
+      <div class="form-group">
+        <label>Time</label>
+        <input type="time" class="form-control" placeholder="" formControlName="time">
+        <div *ngIf="f.get('time')?.touched && f.get('time')?.invalid" class="alert alert-danger"> Time is required</div>
+      </div>
+      <div class="form-group">
+        <label>Room</label>
+        <input type="text" class="form-control" placeholder="Room" formControlName="room">
+      </div>
+      <div *ngIf="f.get('room')?.touched && f.get('room')?.invalid" class="alert alert-danger">Room is required
+      </div>
+
+      <br>
+      <button type="submit" class="btn btn-primary btn-sm" >update</button>
+      <!-- <button type="submit" class="btn btn-primary btn-sm" routerLink="/appointpage">back</button> -->
+    </form>
+  </div>
+

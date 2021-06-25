@@ -1,0 +1,68 @@
+.coverpic{
+    /* background-image: url("../../assets/image/img.jpg.jpg");  */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+    background-color: rgba(26, 190, 108, 0.37);
+    margin-top: 20px;
+}
+.para{
+    font-weight: bold;
+    font-size: 60px;
+    color: brown;
+    opacity: 0.7;
+}
+.loginbutton{
+    position: absolute;
+    right: 50px;
+}
+.p1{
+    position: absolute;
+    font-weight: bold;
+    font-style:italic;
+    font-size: 45px;
+    color: black;
+    top: 50%;
+    margin-left:500px ;
+}
+.logo{
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+    border-radius: 100%;
+}
+.img2{
+    position: absolute;
+    top: 30%;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 220px;
+}
+.img1{
+    position: absolute;
+    top: 30%;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-left: 10px;
+}
+.img3{
+    position: absolute;
+    top: 65%;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-left: 10px;
+}
+.img4{
+    position: absolute;
+    /* left: 55%; */
+    top: 65%;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 220px;
+}
+.nav-item{
+    margin-right: 50px;
+    margin-left: 50px;
+}

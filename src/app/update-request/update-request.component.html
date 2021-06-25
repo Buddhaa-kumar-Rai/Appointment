@@ -1,0 +1,43 @@
+<div class="aa">
+  <div class="container">
+    <form [formGroup]="f" (ngSubmit)="updateinfos()">
+      <div class="form-group">
+        <label><b class="b">Type approved/declined below in the given field</b></label><br><br>
+        <input type="text" class="form-control" placeholder="Declined/Approved" formControlName="room">
+      </div>
+      <div *ngIf="f.get('room')?.touched && f.get('room')?.invalid" class="alert alert-danger">Room is required
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary btn-sm">update</button>
+      <button type="submit" class="btn btn-primary btn-sm" routerLink="/vsr">back</button>
+    </form>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-lg-7 col-md-10 col-sm-12 ">
+      <h1 class="text-bold text-center" style="color:rgb(92, 5, 5);">DashBoard for admin</h1>
+      <table class="table table-responsive table-striped table-dark">
+          <thead>
+              <tr>
+                  <th scope="col">Sl.no</th>
+                  <th scope="col">AppointmentName</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Approved/Declined</th>
+                  <th scope="col">Action</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let a of saa">
+                  <th>{{a.id}}</th>
+                  <td>{{a.AppointmentName}}</td>
+                  <th>{{a.date}}</th>
+                  <th>{{a.time}}</th>
+                  <td>{{a.room}}</td>
+                  <td><button type="submit" class=" btn btn-primary btn-sm" (click)="deleteD(a.id)">Delete</button></td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

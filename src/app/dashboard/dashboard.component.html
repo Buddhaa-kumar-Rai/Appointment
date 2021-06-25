@@ -1,0 +1,80 @@
+<div class="aa">
+  <div class="container" *ngIf="x && y">
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading" style="font-style: italic;"><b>Welcome To Your DashBoard</b></h4>
+      <p>You can choose to view or create the appointmenet by choosing the button below! </p>
+      <hr>
+      <button type="submit" class="btn btn-primary" (click)="view()">View Personal DashBoard</button>
+      <button type="submit" class="btn btn-primary" (click)="crt()">Create Appointment</button><br><br>
+      <button type="submit" class="btn btn-primary" (click)="requests()">View user request</button>
+      <button type="submit" class="btn btn-info" routerLink="/">logout</button>
+    </div>
+  </div>
+
+  <div class="container" *ngIf="!x && y">
+
+    <h1 class="text-bold text-center">DashBoard</h1>
+    <button type="submit" class=" btn btn-primary btn-sm" (click)="refresh()">Back</button><br><br>
+    <table class="table table-responsive table-striped table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Sl.no</th>
+          <th scope="col">Appointment Name</th>
+          <th scope="col">Date</th>
+          <th scope="col">Time</th>
+          <th scope="col">Room</th>
+          <th scope="col">Action1</th>
+          <th scope="col">Action2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let b of sa">
+          <th>{{b.id}}</th>
+          <td>{{b.name}}</td>
+          <td>{{b.date}}</td>
+          <td>{{b.time}}</td>
+          <td>{{b.sel}}</td>
+          <!-- <div> -->
+          <td><button type="submit" class=" btn btn-primary btn-sm" (click)="deleteD(b.id)">Delete</button></td>
+          <!-- </div> -->
+          <td><a routerLink="/updateadmin/{{b.id}}"><button class=" btn btn-primary btn-sm">Edit</button> </a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="container" *ngIf="!y">
+    <p><b>Create your Appointment Here.</b></p><br>
+    <form [formGroup]="f">
+      <div class="form-group"><br>
+        <label>Appointment Name</label>
+        <input type="text" class="form-control" placeholder="AppointmentName" formControlName="name">
+        <div *ngIf="f.get('name')?.touched && f.get('name')?.invalid " class="alert alert-danger">Appointment name
+          cannot
+          be empty and it must be at least 4 character</div>
+      </div>
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" class="form-control" placeholder="" formControlName="date">
+        <div *ngIf="f.get('date')?.touched && f.get('date')?.invalid" class="alert alert-danger"> Date is required</div>
+      </div>
+      <div class="form-group">
+        <label>Time</label>
+        <input type="time" class="form-control" placeholder="" formControlName="time">
+        <div *ngIf="f.get('time')?.touched && f.get('time')?.invalid" class="alert alert-danger"> Time is required</div>
+      </div>
+      <label>Room</label>
+      <select formControlName="sel" class="form-select">
+        <option selected>select room</option>
+        <option >room A</option>
+        <option >room B</option>
+        <option >room C</option>
+        <option >room D</option>
+        <option >room E</option>
+      </select>
+      <div *ngIf="f.get('room')?.touched && f.get('room')?.invalid" class="alert alert-danger"> Choose the room</div>
+      <br>
+      <button type="submit" class=" btn btn-primary btn-sm" (click)="refresh()">Back</button>
+      <button type="submit" class="btn btn-primary btn-sm" (click)="postD()">Submit</button>
+    </form>
+  </div>
+</div>

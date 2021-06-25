@@ -1,0 +1,15 @@
+.aa{
+    height: 635px;
+    background-color: rgb(34, 32, 32);
+}
+.container{
+    background-color: rgb(7, 7, 37);
+    width: 40%;
+    border-radius: 10px;
+}
+.form-group{
+    color: white;
+}
+.header{
+    color: white;
+}

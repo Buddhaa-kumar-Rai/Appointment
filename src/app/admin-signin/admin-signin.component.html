@@ -1,0 +1,26 @@
+<div class="aa">
+  <div class="container">
+    <div class="row center">
+      <div class="col-lg-6 col-md-10 col-sm-12 ">
+  
+        <p class="header"><b>Verify that you are Admin </b></p><br>
+        <form [formGroup]='form'>
+          <div class="form-group">
+            <label>Email address</label>
+            <input type="email" class="form-control" placeholder="Enter email" formControlName="mail">
+          </div>
+          <div *ngIf=" form.get('mail')?.touched && form.get('mail')?.invalid" class="alert alert-danger">Give valid email</div>
+          <div class="form-group">
+            <label >Password</label>
+            <input type="password" class="form-control" placeholder="Password" formControlName="pass">
+          </div>
+          <div *ngIf="form.get('pass')?.touched && form.get('pass')?.invalid" class="alert alert-danger">Required</div>
+          <br>
+  
+          <button type="submit" class="btn btn-primary" (click)="func()">Signin</button>
+  
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
