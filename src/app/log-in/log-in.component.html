@@ -25,9 +25,10 @@
           <div *ngIf="form.get('pass')?.touched && form.get('pass')?.invalid" class="alert alert-danger">Required</div>
           <div class="form-group">
             <label for="exampleInputPassword1">Confirm Password</label>
-            <input type="password" class="form-control" placeholder="" formControlName="confpass">
+            <input type="password" class="form-control" placeholder="" formControlName="confpass" >
           </div>
           <div *ngIf="form.get('conpass')?.touched && form.get('conpass')?.invalid" class="alert alert-danger">Required</div>
+          <!-- <div *ngIf="form.get('confpass')?.errors.mustmach()" class="alert alert-danger">not matched</div> -->
           <br>
   
           <button type="submit" class="btn btn-primary" (click)="signup()">SignUp</button><!-- redirect if verified-->
@@ -52,6 +53,22 @@
             <input type="password" class="form-control" placeholder="Password" formControlName="passw">
           </div>
           <div *ngIf="form.get('passw')?.touched && form.get('passw')?.invalid" class="alert alert-danger">Required</div>
+          
+          <div class="form-group">
+            <label for="exampleInputPassword1">{{randomNumber()}} + {{randomNumber()}}<input type="text" ></label>
+            
+          <div>
+          <p>addition: {{addRandomNumber(0)}}</p>
+
+            <!-- <a type="submit" class="btn btn-primary" (click)="go()" >Logintry</a> -->
+            <!-- <button (click)="go()" [disabled]="">Login</button> -->
+           </div>
+
+          </div>
+          <div *ngIf="t">
+            <a type="submit" class="btn btn-primary" (click)="onlogin()" >Logintry</a>
+          </div>
+          
           <br>
           <a type="submit" class="btn btn-primary" (click)="onlogin()" >Login</a>
         </form>

@@ -1,2 +1,8 @@
 @import "~bootstrap/dist/css/bootstrap.css";
-@import ''
+@import '';
+ul.list.completed li{
+    color: #08750d;
+}
+ul.list.error li{
+    color: #d83131;
+}

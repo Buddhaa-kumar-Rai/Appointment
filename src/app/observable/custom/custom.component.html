@@ -1,0 +1,27 @@
+<p>custom works!</p>
+<div class="my-3">
+    <h2>Custom Observable</h2>
+    <br>
+
+    <div class="row">
+        <div class="col-md-6">
+            <strong>ex-01 (manual data)</strong>
+            <hr>
+            <ul [ngClass]="status =='completed'? 'completed' : status =='error'? 'error' :''" id="element" class="list mx-3"></ul>
+        </div>
+
+        <div class="col-md-6">
+            <strong>ex-02 (custom interval observable)</strong>
+            <hr>
+            <ul  [ngClass]="status2 =='completed'? 'completed' : status2 =='error'? 'error' :''" id="element2" class="list"></ul>
+        </div>
+    </div>
+    <div class="row">
+        <strong>ex-03 (random Names)</strong> 
+        <hr>
+        <p><strong>Random names:</strong>'Buddha','Kumar','Lohorung','Rai'</p>
+        <hr>
+        <p>Current Name:<strong>{{name}}</strong></p> 
+        <!-- <span class="badage badage-success">Success</span> -->
+    </div>
+</div>

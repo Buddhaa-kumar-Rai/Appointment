@@ -1,0 +1,17 @@
+<p>filter works!</p>
+<div class="row-my-3">
+    <h2>Filter</h2>
+    <hr>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+        </tr>
+        <tr *ngFor="let a of data">
+            <td>{{a.id}}</td>
+            <td>{{a.name}}</td>
+            <td>{{a.gender}}</td>
+        </tr>
+    </table>
+</div>

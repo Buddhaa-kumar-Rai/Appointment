@@ -14,24 +14,64 @@ export class LogInComponent implements OnInit {
   'form': FormGroup;
 
   constructor(private f: FormBuilder, private router: Router, private authservice: AuthService, private ss: SserviceService) { }
-
+  // mustmach(cont:string,co:string)
+  // {
+  //   return(form:FormGroup)=>{
+  //     const control=form.controls[cont];
+  //     const contr=form.controls[co];
+  //     if(contr.errors && contr.errors.mustmach ){
+  //       return
+  //     }
+  //     if(control.value !== contr.value){
+  //       contr.setErrors({mustmach:true})
+  //     }
+  //     else{
+  //       contr.setErrors(null);
+  //     }
+  //   }
+  // }
   ngOnInit(): void {
     this.form = this.f.group({
-      // mail: ['', Validators.email],
-      // pass: ['', Validators.required],
+      //  mail: ['', Validators.email],
+      //  pass: ['', Validators.required],
       email: ['', Validators.email],
       passw: ['', Validators.required],
-      // confpass: ['', Validators.required],
+      //  confpass: ['', Validators.required],
+      p:undefined
       
-    })
+     }//,
+    // {
+    //   Validators:this.mustmach('pass','confpass')
+    // }
+    )
 
 
   }
+  count  = 0;
+ 
+  randomNumber() {
+    let random = Math.floor(Math.random()*10);
+    this.addRandomNumber(random);
+    return  random;
+  }
+  addRandomNumber(random: any){
+    this.count += random;
+    return this.count; 
+  }
+p:any
   v = true
   v1 = false;
+  t=false;
+  go(){
+     if(this.form.value===4)
+     {
+       this.t=true;
+     }
+
+  }
   sign() {
     
-      this.v = false;
+    this.v = false;
     this.v1 = false;
   }
   signup() {

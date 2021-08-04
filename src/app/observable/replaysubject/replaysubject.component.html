@@ -1,0 +1,41 @@
+<p>replaysubject works!</p>
+<div class="my-3">
+    <h2>Replay Subject</h2>
+    <br>
+    <div class="row">
+        <div class="col">
+            <h4>add video</h4>
+        </div>
+    </div>
+    <hr>
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <input type="text" class="form-control" #photo>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-success" (click)="func(photo)">Add photo</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <strong>user-01</strong>
+            <hr>
+            <ul>
+                <li *ngFor="let a of userlist1"><b>Photo</b> {{a}}</li>
+            </ul>
+        </div> 
+
+        <div class="col-md-4">
+            <strong>user-02</strong>
+            <hr>
+            <ul>
+                <li *ngFor="let a of userlist2"><b>Photo:</b> {{a}}</li>
+            </ul>
+            <button class="btn btn-sm" 
+            [ngClass]="subscribemode2? 'btn-danger' : 'btn-success'"
+            (click)="user2func()">{{subscribemode2? 'unsubscribe' : 'subscribe'}}</button>
+        </div> 
+
+    </div>
+</div>

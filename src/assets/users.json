@@ -1,0 +1,24 @@
+[
+    {
+      "age": 20,
+      "name": "Buddha",
+      "gender": "Male",
+      "company": "Selise",
+      "email": "buddhaakrrai@gmail.com"
+    },
+    {
+      "age": 21,
+      "name": "Shrijana",
+      "gender": "Female",
+      "company": "Green Mart",
+      "email": "shrijanabkr123@gmail.com"
+    },
+    {
+      "age": 22,
+      "name": "Bishal",
+      "gender": "Male",
+      "company": "TashiCell",
+      "email": "bishal123@gmail.com"
+    }
+
+]
